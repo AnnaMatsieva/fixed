@@ -60,7 +60,6 @@ h1, h2, h3, figure{margin: 0;}
 .header{
 	background: #44433e;
 	height: 120px;
-	overflow: hidden;
 	.logo{
 		float: left;
 		padding-top: 25px;
@@ -71,6 +70,7 @@ h1, h2, h3, figure{margin: 0;}
 	.header-menu{
 		float: right;
 		 ul{
+		 	position: relative;
 			margin: 0;
 			line-height: 120px;
 			li{
@@ -86,7 +86,47 @@ h1, h2, h3, figure{margin: 0;}
 						padding-bottom: 50px;
 					}
 				}
-				&:last-child{margin-top: 4px;}
+				&:last-child{
+					margin-top: 4px;
+					width: 25px;
+					height: 25px;
+					img{width: 20px;}
+					&:hover{
+						.b-search{
+							width: 640px;
+							height: 55px;
+							position: absolute;
+							display: block;
+							z-index: 1;
+							background: #fff;
+							left: 0;
+							top: 120px;
+							padding-left: 20px;
+						}
+						.drop-search{
+							background: #18cfab;
+						    width: 45px;
+						    height: 45px;
+						    display: block;
+						    z-index: 2;
+						    position: relative;
+						    right: 22px;
+						    top: 3px;
+						    padding-bottom: 0;
+						    border: none;
+							&::after{
+								content: "";
+								background: url("../img/drop-search.png") no-repeat;
+								width: 20px;
+								height: 20px;
+								display: block;
+								position: relative;
+								top: 14px;
+								left: 11px;
+							} 
+						}
+					}
+				}
 			}
 		}
 	}
@@ -102,13 +142,11 @@ button, .button{
 	text-transform: uppercase;
 	cursor: pointer;
 }
-/*****************************************/
 .section1{
     height: 890px;
     text-align: center;
     background-repeat: no-repeat;
     position: relative;
-    overflow: hidden;
     display: block;
 	background-image: linear-gradient(rgba(116, 116, 116, 0.6), rgba(116, 116, 116, 0.6)), url(../img/image.jpg);
 	background-size: cover;
@@ -134,6 +172,7 @@ button, .button{
 	button{
 		margin-right: 30px;
 	}
+	.vertical-table{width: 1170px;}
 }
 .slider{
 	position: absolute;
@@ -436,6 +475,7 @@ button, .button{
 	img{
 		width: 195px;
 		margin: 0 20px 20px 0;
+		float: left;
 	}
 	.b-services{
 		padding-top: 30px;
@@ -495,6 +535,7 @@ button, .button{
 		float: left;
 		border: #f0f4f5 1px solid;
 		margin: 30px 30px 0 0;
+		img{margin-bottom: 15px;}
 		&:nth-child(4n){margin-right: 0;}
 		figure{
 			position: relative;
@@ -516,12 +557,14 @@ button, .button{
 		position: absolute;
 		right: 0;
 		top: 0;
-		color: #fff;
 		text-align: center;
+		p{
+			color: #fff;
+		}
 	}
 	a:hover{
 		.b-date{
-			background: $main-color
+			background: $main-color;
 		}
 		figcaption p:first-child{
 			color: $main-color;
@@ -957,10 +1000,14 @@ button, .button{
     		padding: 30px 0;
     		&:first-child{padding-top: 0;}
     		&:last-child{border: none;}
+    		a{
+    			color: #fff;
+    			font-size: 16px;
+    			&:hover{color: $main-color;}
+    		}
     		p{
     			font-size: 14px;
     			color: #fff;
-    			&:first-child{font-size: 16px;}
     			&:nth-child(2){
     				color: #b2b2b2;
     				margin: 15px 0 20px 0;

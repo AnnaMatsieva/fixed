@@ -72,8 +72,7 @@ h1, h2, h3, figure {
 
 .header {
   background: #44433e;
-  height: 120px;
-  overflow: hidden; }
+  height: 120px; }
   .header .logo {
     float: left;
     padding-top: 25px; }
@@ -82,6 +81,7 @@ h1, h2, h3, figure {
   .header .header-menu {
     float: right; }
     .header .header-menu ul {
+      position: relative;
       margin: 0;
       line-height: 120px; }
       .header .header-menu ul li {
@@ -96,7 +96,41 @@ h1, h2, h3, figure {
             border-bottom: #18cfab 2px solid;
             padding-bottom: 50px; }
         .header .header-menu ul li:last-child {
-          margin-top: 4px; }
+          margin-top: 4px;
+          width: 25px;
+          height: 25px; }
+          .header .header-menu ul li:last-child img {
+            width: 20px; }
+          .header .header-menu ul li:last-child:hover .b-search {
+            width: 640px;
+            height: 55px;
+            position: absolute;
+            display: block;
+            z-index: 1;
+            background: #fff;
+            left: 0;
+            top: 120px;
+            padding-left: 20px; }
+          .header .header-menu ul li:last-child:hover .drop-search {
+            background: #18cfab;
+            width: 45px;
+            height: 45px;
+            display: block;
+            z-index: 2;
+            position: relative;
+            right: 22px;
+            top: 3px;
+            padding-bottom: 0;
+            border: none; }
+            .header .header-menu ul li:last-child:hover .drop-search::after {
+              content: "";
+              background: url("../img/drop-search.png") no-repeat;
+              width: 20px;
+              height: 20px;
+              display: block;
+              position: relative;
+              top: 14px;
+              left: 11px; }
 
 button, .button {
   width: 165px;
@@ -109,13 +143,11 @@ button, .button {
   text-transform: uppercase;
   cursor: pointer; }
 
-/*****************************************/
 .section1 {
   height: 890px;
   text-align: center;
   background-repeat: no-repeat;
   position: relative;
-  overflow: hidden;
   display: block;
   background-image: linear-gradient(rgba(116, 116, 116, 0.6), rgba(116, 116, 116, 0.6)), url(../img/image.jpg);
   background-size: cover;
@@ -138,6 +170,8 @@ button, .button {
         font-size: 34px; }
   .section1 button {
     margin-right: 30px; }
+  .section1 .vertical-table {
+    width: 1170px; }
 
 .slider {
   position: absolute;
@@ -379,7 +413,8 @@ button, .button {
   height: 580px; }
   .section6 img {
     width: 195px;
-    margin: 0 20px 20px 0; }
+    margin: 0 20px 20px 0;
+    float: left; }
   .section6 .b-services {
     padding-top: 30px;
     clear: both; }
@@ -429,6 +464,8 @@ button, .button {
   float: left;
   border: #f0f4f5 1px solid;
   margin: 30px 30px 0 0; }
+  .figure-block li img {
+    margin-bottom: 15px; }
   .figure-block li:nth-child(4n) {
     margin-right: 0; }
   .figure-block li figure {
@@ -448,8 +485,9 @@ button, .button {
   position: absolute;
   right: 0;
   top: 0;
-  color: #fff;
   text-align: center; }
+  .figure-block .b-date p {
+    color: #fff; }
 .figure-block a:hover .b-date {
   background: #18cfab; }
 .figure-block a:hover figcaption p:first-child {
@@ -815,11 +853,14 @@ button, .button {
         padding-top: 0; }
       .footer .footer-post li:last-child {
         border: none; }
+      .footer .footer-post li a {
+        color: #fff;
+        font-size: 16px; }
+        .footer .footer-post li a:hover {
+          color: #18cfab; }
       .footer .footer-post li p {
         font-size: 14px;
         color: #fff; }
-        .footer .footer-post li p:first-child {
-          font-size: 16px; }
         .footer .footer-post li p:nth-child(2) {
           color: #b2b2b2;
           margin: 15px 0 20px 0; }
