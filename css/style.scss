@@ -141,6 +141,7 @@ button, .button{
 	font-weight: bold;
 	text-transform: uppercase;
 	cursor: pointer;
+	border-top: #fff 4px solid;
 }
 .section1{
     height: 890px;
@@ -1064,6 +1065,7 @@ button, .button{
 		background: #22353f;
 		height: 105px;
 		clear: both;
+		span{color: $main-color;}
 	}
 }
 

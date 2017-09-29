@@ -141,7 +141,8 @@ button, .button {
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  cursor: pointer; }
+  cursor: pointer;
+  border-top: #fff 4px solid; }
 
 .section1 {
   height: 890px;
@@ -908,6 +909,8 @@ button, .button {
     background: #22353f;
     height: 105px;
     clear: both; }
+    .footer .copy span {
+      color: #18cfab; }
 
 .tags li {
   float: left;
