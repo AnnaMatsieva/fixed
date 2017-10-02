@@ -63,7 +63,8 @@ h2 {
 }
 
 .h2-border {
-  margin: 100px 0;
+  padding: 100px 0;
+  display: inherit;
 }
 
 /*----TO DO calc*/
@@ -545,13 +546,13 @@ button {
   text-align: center;
 }
 
-.our-work .short-news .simple-text p:first-child {
+.our-work .short-news .simple-text .simple-title {
   font-size: 14px;
   color: #18cfab;
   text-transform: uppercase;
 }
 
-.our-work .short-news .simple-text p:nth-child(2) {
+.our-work .short-news .simple-text .simple-info {
   font-size: 12px;
 }
 
@@ -786,16 +787,16 @@ button {
   border-color: #25333c;
 }
 
-.facts .four-blocks li:nth-child(even) p:last-child {
+.facts .four-blocks li:nth-child(even) .fact-text {
   color: #25333c;
 }
 
-.facts .four-blocks li p:first-child {
+.facts .four-blocks li .fact-number {
   color: #fff;
   font-size: 36px;
 }
 
-.facts .four-blocks li p:last-child {
+.facts .four-blocks li .fact-text {
   font-size: 18px;
   color: #18cfab;
 }
@@ -882,11 +883,13 @@ button {
 .price-table ul {
   float: left;
   background: #f8fcfe;
+  border: #e5e5e6 1px solid;
   text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .price-table ul li {
-  border: #e5e5e6 1px solid;
   width: 285px;
   font-size: 14px;
   padding: 20px 0 15px 0px;
@@ -898,7 +901,6 @@ button {
   text-transform: uppercase;
   color: #717171;
   padding: 25px 0;
-  border-radius: 6px;
 }
 
 .price-table ul li:nth-child(2) {
@@ -914,7 +916,6 @@ button {
 
 .price-table ul li:nth-child(10) {
   padding: 25px 0;
-  border-radius: 6px;
 }
 
 .price-table button {
@@ -960,17 +961,17 @@ button {
   border-color: #18cfab;
 }
 
-.circle-slider p:first-child {
+.circle-slider .people-text {
   margin-bottom: 40px;
 }
 
-.circle-slider p:nth-child(2) {
+.circle-slider .people-name {
   color: #18cfab;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.circle-slider p:nth-child(3) {
+.circle-slider .people-profession {
   font-size: 13px;
 }
 
@@ -1088,16 +1089,16 @@ button {
   position: relative;
 }
 
-.our-team .team figure .team-name {
+.our-team .team figure .team-info {
   padding: 15px 0 15px 15px;
 }
 
-.our-team .team figure .team-name p {
+.our-team .team figure .team-info p {
   font-size: 13px;
   color: #18cfab;
 }
 
-.our-team .team figure .team-name p:first-child {
+.our-team .team figure .team-info .team-name {
   font-size: 16px;
   color: #fff;
   font-weight: bold;
@@ -1251,9 +1252,6 @@ button {
 }
 
 /*------TO DO h2-border on center----------*/
-.contact-us .h2-border {
-  margin-bottom: 90px;
-}
 
 .contact-us .right {
   float: right;
@@ -1376,7 +1374,7 @@ button {
   color: #fff;
 }
 
-.footer .footer-post li p:nth-child(2) {
+.footer .footer-post li .date {
   color: #b2b2b2;
   margin: 15px 0 20px 0;
 }
