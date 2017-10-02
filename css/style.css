@@ -60,12 +60,29 @@ h1 {
 h2 {
   font-size: 36px;
   text-align: center;
-  padding: 100px 0 30px 0;
 }
 
 .h2-border {
-  background: url("../img/h2.png") no-repeat bottom center;
-  margin-bottom: 60px;
+  margin: 100px 0;
+}
+
+/*----TO DO calc*/
+.h2-border::after,
+.h2-border::before {
+  content: "";
+  width: 75px;
+  height: 2px;
+  display: block;
+  background: #18cfab;
+  margin: auto;
+  position: relative;
+  top: 74px;
+  left: 0px;
+}
+
+.h2-border::after {
+  top: 36px;
+  left: 5px;
 }
 
 h3 {
@@ -76,10 +93,6 @@ h3 {
   content: "";
   display: table;
   clear: both;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .wrap-center {
@@ -218,7 +231,6 @@ button {
 }
 
 .creative {
-  height: 890px;
   text-align: center;
   background-repeat: no-repeat;
   position: relative;
@@ -226,6 +238,10 @@ button {
   background-image: linear-gradient(rgba(116, 116, 116, 0.6), rgba(116, 116, 116, 0.6)), url(../img/image.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.creative .wrap-center {
+  padding: 245px;
 }
 
 .creative h1 {
@@ -257,10 +273,6 @@ button {
 
 .creative button {
     margin-right: 30px;
-}
-
-.creative .vertical-table {
-  width: 1170px;
 }
 
 .slider {
@@ -372,10 +384,6 @@ button {
 .features {
   background: #ffffff;
   color: #717171; 
-}
-
-.features section {
-  padding: 70px 0 100px 0;
 }
 
 .features article {
@@ -843,6 +851,7 @@ button {
   right: 0;
 }
 
+/*----------------------------TO DO radius for triangle--------------------------*/
 .pricing-table .table-feature li:first-child span::after {
   content: "";
   width: 0;
@@ -1186,17 +1195,19 @@ button {
   float: left;
 }
 
-.clean-design p {
+.clean-design h2,
+.clean-design h3 {
   text-transform: uppercase;
 }
 
-.clean-design p:first-child {
+.clean-design h2 {
   font-size: 50px;
   color: #fff;
   padding-top: 135px;
+  padding-bottom: 0;
 }
 
-.clean-design p:nth-child(2) {
+.clean-design h3 {
   font-size: 47px;
   color: #18cfab;
   padding-bottom: 90px;
@@ -1226,7 +1237,12 @@ button {
 
 .contact-us {
   background: #ffffff;
-  height: 810px;
+  padding: 130px 0;
+}
+
+.contact-us .message {
+  width: 560px;
+  display: inline-block;
 }
 
 .contact-us h2 {
@@ -1234,9 +1250,9 @@ button {
   text-align: left;
 }
 
+/*------TO DO h2-border on center----------*/
 .contact-us .h2-border {
   margin-bottom: 90px;
-  background-position: 75px 65px;
 }
 
 .contact-us .right {
