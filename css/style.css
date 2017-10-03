@@ -163,13 +163,13 @@ h3 {
   z-index: 2;
 }
 
-.header .header-menu ul li:last-child div {
+.header .header-menu ul li:last-child .search-show {
   height: 120px;
   box-sizing: content-box;
   position: static;
   cursor: pointer;
 }
-.header .header-menu ul li:last-child div::before {
+.header .header-menu ul li:last-child .search-show::before {
   background: url("../img/icons.png") no-repeat;
   content: "";
   display: block;
@@ -180,11 +180,11 @@ h3 {
   background-position: -256px 0px;
 }
 
-.header .header-menu ul li:last-child div .search {
+.header .header-menu ul li:last-child .search-show .search {
   display: none;
 }
 
-.header .header-menu ul li:last-child div:hover .search,
+.header .header-menu ul li:last-child .search-show:hover .search,
 .header .header-menu ul li:last-child .active .search {
   display: block;
   position: absolute;
@@ -193,7 +193,7 @@ h3 {
   z-index: 1;
 }
 
-.header .header-menu ul li:last-child div .search .b-search {
+.header .header-menu ul li:last-child .search-show .search .b-search {
   width: 650px;
   height: 60px;
   padding-left: 15px;
