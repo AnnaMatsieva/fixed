@@ -449,8 +449,8 @@ button {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 675px;
   position: relative;
+  padding-bottom: 20px;
 }
 
 .our-company h2,
@@ -785,6 +785,10 @@ button {
 .facts {
   background: #25333c;
   height: 370px;
+}
+
+.four-blocks {
+  overflow: hidden;
 }
 
 .facts .four-blocks li {
@@ -1243,13 +1247,17 @@ button {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 925px;
   text-align: center;
   color: #fff;
+  padding-bottom: 30px;
 }
 
 .clean-design .left {
   float: left;
+}
+
+.clean-design .right {
+  overflow: hidden;
 }
 
 .clean-design h2,
@@ -1276,6 +1284,18 @@ button {
 
 .clean-design button {
   float: left;
+}
+
+.tags li {
+  float: left;
+  border: #acacac 1px solid;
+  padding: 10px;
+  margin: 0 5px 5px 0; 
+}
+  
+.tags li:hover {
+  background: #18cfab;
+  color: #fff; 
 }
 
 .point li {
