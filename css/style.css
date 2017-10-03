@@ -166,55 +166,62 @@ h3 {
 .header .header-menu ul li:last-child a {
   height: 120px;
   box-sizing: content-box;
+  position: static;
 }
 .header .header-menu ul li:last-child a::before {
-  background: url("../img/search.png") no-repeat;
+  background: url("../img/icons.png") no-repeat;
   content: "";
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   position: relative;
   top: 45px;
+  background-position: -256px 0px;
 }
 
-.b-search{
+.header .header-menu ul li:last-child a .search {
   display: none;
 }
 
-.header .header-menu ul li:last-child a:hover .b-search{
-  width: 640px;
-  height: 55px;
-  position: absolute;
+.header .header-menu ul li:last-child a:hover .search,
+.header .header-menu ul li:last-child .active .search {
   display: block;
-  z-index: 1;
-  background: #fff;
+  position: absolute;
   left: 0;
-  top: 120px;
-  padding-left: 20px;
+  top: 91px;
+  z-index: 1;
 }
 
-.header .header-menu ul li:last-child a:hover .drop-search {
+.header .header-menu ul li:last-child a .search .b-search {
+  width: 650px;
+  height: 60px;
+  padding-left: 15px;
+  display: inline-block;
+}
+
+.header .header-menu ul li:last-child .drop-search {
   background: #18cfab;
   width: 45px;
   height: 45px;
   display: block;
   z-index: 2;
-  position: relative;
-  right: 22px;
-  top: 3px;
+  position: absolute;
+  top: 39px;
+  right: 10px;
   padding-bottom: 0;
   border: none;
 }
 
 .header .header-menu ul li:last-child .drop-search::after {
   content: "";
-  background: url("../img/drop-search.png") no-repeat;
-  width: 20px;
-  height: 20px;
+  background: url("../img/icons.png") no-repeat;
+  width: 25px;
+  height: 25px;
   display: block;
   position: relative;
   top: 0px;
-  left: 7px;
+  left: 5px;
+  background-position: -61px 0px;
 }
 
 button {
@@ -296,17 +303,18 @@ button {
 
 .slider .prev:hover::after,
 .slider .next:hover::after {
-  background-position: -24px 0;
+  background-position: -336px 0;
 }
 
 .slider .prev::after,
 .slider .next::after {
   content: "";
-  background: url(../img/slider-arrow.png) no-repeat;
+  background: url(../img/icons.png) no-repeat;
   width: 15px;
-  height: 25px;
+  height: 30px;
   display: inline-block;
   margin-top: 20px;
+  background-position: -312px 0px;
 }
 
 .slider .prev {
@@ -393,44 +401,44 @@ button {
 }
 
 .features article:nth-child(1) h3::before {
-  background-position: 0px 0;
+  background-position: -4px 0;
 }
 
 .features article:nth-child(2) h3::before {
-  background-position: -40px 0;
+  background-position: -45px 0;
 }
 
 .features article:nth-child(3) h3::before {
-  background-position: -80px 0;
+  background-position: -85px 0;
 }
 
 .features article:nth-child(4) h3::before {
-  background-position: -120px 0;
+  background-position: -125px 0;
 }
 
 .features article:nth-child(5) h3::before {
-  background-position: -160px 0;
+  background-position: -165px 0;
 }
 
 .features article:nth-child(6) h3::before {
-  background-position: -200px 0;
+  background-position: -205px 0;
 }
 
 .features article:nth-child(7) h3::before {
-  background-position: -240px 0;
+  background-position: -245px 0;
 }
 
 .features article:nth-child(8) h3::before {
-  background-position: -280px 0;
+  background-position: -285px 0;
 }
 
 .features article:nth-child(9) h3::before {
-  background-position: -320px 0;
+  background-position: -325px 0;
 }
 
 .features article h3 {
   font-weight: bold;
-  line-height: 40px;
+  line-height: 45px;
 }
 
 .features article h3::before {
@@ -485,6 +493,8 @@ button {
   cursor: pointer;
   border-top: transparent 1px solid;
   padding-top: 10px;
+  color: #fff;
+  font-weight: bold;
 }
 
 .our-company .company-menu li:hover,
@@ -1076,17 +1086,17 @@ button {
 
 .circle-slider .prev:hover::after,
 .circle-slider .next:hover::after {
-  background-position: -12px 0;
+  background-position: -13px 0px;
 }
 
 .circle-slider .prev::after,
 .circle-slider .next::after {
   content: "";
-  background: url(../img/circle-slider-arrow.png) no-repeat;
+  background: url(../img/icons.png) no-repeat;
   width: 8px;
-  height: 13px;
+  height: 18px;
   display: inline-block;
-  margin-top: 9px;
+  margin-top: 7px;
 }
 
 .circle-slider .prev:hover::after {
@@ -1103,11 +1113,12 @@ button {
 
 .quotes {
   display: block;
-  background: url("../img/quotes.png") no-repeat;
-  width: 44px;
-  height: 30px;
+  background: url("../img/icons.png") no-repeat;
+  width: 52px;
+  height: 35px;
   margin: auto;
   margin-bottom: 30px;
+  background-position: -183px 0px;
 }
 
 .our-team {
@@ -1305,11 +1316,14 @@ button {
 
 .point li::before {
   content: "";
-  background: url("../img/point.png") no-repeat;
+  background: url(../img/icons.png) no-repeat;
   width: 24px;
-  height: 24px;
+  height: 26px;
   display: inline-block;
   padding-right: 20px;
+  top: 5px;
+  position: relative;
+  background-position: -112px 0px;
 }
 
 .contact-us {
