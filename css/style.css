@@ -139,7 +139,6 @@ h3 {
 .header .header-menu ul {
   position: relative;
   margin: 0;
-  line-height: 120px;
 }
 
 .header .header-menu ul li {
@@ -153,6 +152,7 @@ h3 {
   font-size: 13px;
   display: block;
   border-bottom: transparent 2px solid;
+  line-height: 120px;
 }
 
 .header .header-menu ul li a:hover {
@@ -163,36 +163,37 @@ h3 {
   z-index: 2;
 }
 
-.header .header-menu ul li:last-child a {
+.header .header-menu ul li:last-child div {
   height: 120px;
   box-sizing: content-box;
   position: static;
+  cursor: pointer;
 }
-.header .header-menu ul li:last-child a::before {
+.header .header-menu ul li:last-child div::before {
   background: url("../img/icons.png") no-repeat;
   content: "";
   display: block;
   width: 30px;
   height: 30px;
   position: relative;
-  top: 45px;
+  top: 42px;
   background-position: -256px 0px;
 }
 
-.header .header-menu ul li:last-child a .search {
+.header .header-menu ul li:last-child div .search {
   display: none;
 }
 
-.header .header-menu ul li:last-child a:hover .search,
+.header .header-menu ul li:last-child div:hover .search,
 .header .header-menu ul li:last-child .active .search {
   display: block;
   position: absolute;
   left: 0;
-  top: 91px;
+  top: 120px;
   z-index: 1;
 }
 
-.header .header-menu ul li:last-child a .search .b-search {
+.header .header-menu ul li:last-child div .search .b-search {
   width: 650px;
   height: 60px;
   padding-left: 15px;
@@ -206,7 +207,7 @@ h3 {
   display: block;
   z-index: 2;
   position: absolute;
-  top: 39px;
+  top: 10px;
   right: 10px;
   padding-bottom: 0;
   border: none;
