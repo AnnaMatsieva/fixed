@@ -67,7 +67,6 @@ h2 {
   display: inherit;
 }
 
-/*----TO DO calc*/
 .h2-border::after,
 .h2-border::before {
   content: "";
@@ -483,12 +482,15 @@ button {
   font-size: 16px;
   text-transform: uppercase;
   margin-right: 20px;
+  cursor: pointer;
+  border-top: transparent 1px solid;
+  padding-top: 10px;
 }
 
-.our-company .company-menu li a:hover {
+.our-company .company-menu li:hover,
+.our-company .company-menu .active{
   color: #18cfab;
-  border-top: #18cfab 1px solid;
-  padding-top: 10px;
+  border-top-color: #18cfab;
 }
 
 .our-company .skills {
@@ -512,8 +514,7 @@ button {
 
 .our-work .short-news {
   clear: both;
-  padding: 70px 0;
-  text-align: left;
+  padding-top: 70px;
 }
 
 .our-work .short-news .b-short-news {
@@ -558,6 +559,10 @@ button {
 
 .our-work .vertical-table {
   text-align: center;
+}
+
+.our-work button {
+  margin-top: 70px;
 }
 
 .link {
@@ -623,6 +628,7 @@ button {
   padding: 15px;
   border: 1px solid #ebebeb;
   background: #fff;
+  cursor: pointer;
 }
 
 .simple-menu li:hover {
@@ -630,8 +636,10 @@ button {
   padding-top: 15px;
 }
 
-.simple-menu li:hover a {
-  color: #18cfab;
+.simple-menu li:hover,
+.simple-menu .active {
+  background: #18cfab;
+  color: #fff;
 }
 
 .our-services {
@@ -661,18 +669,18 @@ button {
   position: relative;
 }
 
-.arrow-menu li:hover {
+.arrow-menu li:hover,
+.arrow-menu .active {
   background: #18cfab;
-}
-
-.arrow-menu li:hover a {
   color: #fff;
 }
 
-.arrow-menu li:hover:after {
+.tabs .arrow-menu li.active::after,
+.arrow-menu li.active:hover::after,
+.arrow-menu li:hover::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -9px;
   left: 50%;
   border-style: solid;
   border-width: 10px 10px 0 10px;
@@ -852,7 +860,6 @@ button {
   right: 0;
 }
 
-/*----------------------------TO DO radius for triangle--------------------------*/
 .pricing-table .table-feature li:first-child span::after {
   content: "";
   width: 0;
@@ -1111,11 +1118,13 @@ button {
 
 .our-team .team figure:hover .view-team {
   position: absolute;
-  background: url("../img/view.png");
+  background-image: url("../img/view.png");
   top: 75px;
   left: 90px;
   width: 85px;
   height: 85px;
+  background-color: #18cfab;
+  border-radius: 50%;
 }
 
 .our-team .team figure:hover p:last-child {
@@ -1251,8 +1260,6 @@ button {
   text-align: left;
 }
 
-/*------TO DO h2-border on center----------*/
-
 .contact-us .right {
   float: right;
 }
@@ -1285,7 +1292,6 @@ button {
   font-size: 14px;
 }
 
-/**********************************/
 .footer {
   background: #1c2b33;
 }
@@ -1451,14 +1457,11 @@ button {
   color: #18cfab;
 }
 
-.tags li {
-  float: left;
-  border: #acacac 1px solid;
-  padding: 10px;
-  margin: 0 5px 5px 0;
+
+.tabs{
+    display: block;
 }
 
-.tags li:hover {
-  background: #18cfab;
-  color: #fff;
+.hide {
+  display: none;
 }
